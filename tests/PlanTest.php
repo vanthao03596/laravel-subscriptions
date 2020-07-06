@@ -2,7 +2,6 @@
 
 namespace Vanthao03596\LaravelSubscriptions\Tests;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Vanthao03596\LaravelSubscriptions\Models\Plan;
 use Vanthao03596\LaravelSubscriptions\Models\PlanFeature;
 
