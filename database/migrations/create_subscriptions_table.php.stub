@@ -101,4 +101,13 @@ class CreateSubscriptionsTable extends Migration
                 ->onUpdate('cascade');
         });
     }
+
+    public function down()
+    {
+        Schema::drop('plans');
+        Schema::drop('plan_features');
+        Schema::drop('plan_subscriptions');
+        Schema::drop($tableNames['roles']);
+        Schema::drop('plan_subscription_usage');
+    }
 }
