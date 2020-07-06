@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Vanthao03596\LaravelSubscriptions\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Skeleton\SkeletonServiceProvider;
+use Vanthao03596\LaravelSubscriptions\LaravelSubscriptionsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -17,7 +17,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            LaravelSubscriptionsServiceProvider::class,
         ];
     }
 
@@ -31,7 +31,7 @@ class TestCase extends Orchestra
         ]);
 
         /*
-        include_once __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_laravel_subscriptions_table.php.stub';
         (new \CreatePackageTable())->up();
         */
     }

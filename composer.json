@@ -1,17 +1,17 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "vanthao03596/laravel-subscriptions",
+    "description": "Laravel Subscriptions is a flexible plans and subscription management system for Laravel, with the required tools to run your SAAS like services efficiently.",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "vanthao03596",
+        "laravel-subscriptions",
+        "laravel"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/vanthao03596/laravel-subscriptions",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Pham Thao",
+            "email": "phamthao03596@gmail.com",
             "role": "Developer"
         }
     ],
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Vanthao03596\\LaravelSubscriptions\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Vanthao03596\\LaravelSubscriptions\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Vanthao03596\\LaravelSubscriptions\\LaravelSubscriptionsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "LaravelSubscriptions": "Vanthao03596\\LaravelSubscriptions\\LaravelSubscriptionsFacade"
             }
         }
     },
