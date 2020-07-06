@@ -2,6 +2,9 @@
 
 namespace Vanthao03596\LaravelSubscriptions\Tests;
 
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Orchestra\Testbench\Concerns\WithLaravelMigrations;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Vanthao03596\LaravelSubscriptions\LaravelSubscriptionsServiceProvider;
 
@@ -14,6 +17,7 @@ abstract class TestCase extends Orchestra
         $this->setUpDatabase($this->app);
 
         $this->withFactories(__DIR__.'/database/factories');
+
     }
 
     protected function getPackageProviders($app)
@@ -44,10 +48,17 @@ abstract class TestCase extends Orchestra
             'reserved' => null,
             'onUpdate' => false,
         ]);
+
+        $app['config']->set('auth.providers.users.model', User::class);
     }
 
     public function setUpDatabase($app)
     {
+        $app['db']->connection()->getSchemaBuilder()->create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email');
+        });
+
         include_once __DIR__.'/../database/migrations/create_subscriptions_table.php.stub';
         (new \CreateSubscriptionsTable())->up();
     }

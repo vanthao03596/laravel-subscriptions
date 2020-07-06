@@ -14,6 +14,10 @@ class Plan extends Model
 
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'is_active' => 'bool',
+    ];
+
     public function features(): HasMany
     {
         return $this->hasMany(config('laravel-subscriptions.models.plan_feature'), 'plan_id', 'id');
