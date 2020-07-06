@@ -34,6 +34,7 @@ $factory->define(PlanFeature::class, function (Generator $faker) {
 
 $factory->define(PlanSubscription::class, function (Generator $faker) {
     $user = factory(User::class)->create();
+
     return [
         'plan_id' => factory(Plan::class)->create()->id,
         'name' => $faker->name,

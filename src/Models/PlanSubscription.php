@@ -1,6 +1,7 @@
 <?php
 
 namespace Vanthao03596\LaravelSubscriptions\Models;
+
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 

@@ -3,8 +3,6 @@
 namespace Vanthao03596\LaravelSubscriptions\Tests;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Orchestra\Testbench\Concerns\WithLaravelMigrations;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Vanthao03596\LaravelSubscriptions\LaravelSubscriptionsServiceProvider;
 
@@ -17,7 +15,6 @@ abstract class TestCase extends Orchestra
         $this->setUpDatabase($this->app);
 
         $this->withFactories(__DIR__.'/database/factories');
-
     }
 
     protected function getPackageProviders($app)
